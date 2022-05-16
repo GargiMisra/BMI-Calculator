@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <style>
+            body{
+                width: 100vw;
+                height: 100vh;
+                display: grid;
+                place-items: center;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Body Mass Index Calculator</h1>
+        <table>
+            <tr>
+                <td>Height :</td>
+                <td><input type="number" id="h" placeholder="Height in meters"></td>
+            </tr>
+            <tr>
+                <td>Weight :</td>
+                <td><input type="number" id="w" placeholder="Weight in kilograms"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><button class="btn btn-success" onclick="f()">Calculate</button></td>
+            </tr>
+            <tr>
+                <td>BMI :</td>
+                <td><input type="number" id="bmi" placeholder="Your BMI"></td>
+            </tr>
+        </table>
+        <h6 style="text-align: center;">A healthy BMI ranges between 19 & 25.</h6>
+        <script type="text/javascript">
+            function f(){
+                var height = document.getElementById("h").value;
+                var weight = document.getElementById("w").value;
+                var b = weight / (height * height);
+                document.getElementById("bmi").value = b;
+            }
+        </script>
+    </body>
+</html>
